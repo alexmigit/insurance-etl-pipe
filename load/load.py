@@ -35,11 +35,9 @@ def load_to_snowflake(df, table_name):
     # Insert data into the table
     for _, row in df.iterrows():
         # Prepare the insert query with placeholders for each column
-        # Using %s as a placeholder for each value
-        # This is a common practice to prevent SQL injection
+        # Using %s as a placeholder for each value to prevent SQL injection
         placeholders = ", ".join(["%s"] * len(row))
-        # Construct the insert query
-        # Using the table name and placeholders
+        # Construct the insert query using the table name and placeholders
         # The row values will be passed as a tuple to the execute method
         insert_query = f"INSERT INTO {table_name} VALUES ({placeholders})"
         cursor.execute(insert_query, tuple(row))       
