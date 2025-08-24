@@ -2,3 +2,5 @@ pandas
 snowflake-connector-python
 python-dotenv
 requests
+dbt-core
+dbt-snowflake
