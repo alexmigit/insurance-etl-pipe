@@ -35,6 +35,12 @@ DROP SCHEMA IF EXISTS INSURE_DB.PUBLIC;
 
 CREATE OR REPLACE SCHEMA RAW;
 
+CREATE OR REPLACE SCHEMA STAGING;
+
+CREATE OR REPLACE SCHEMA MART;
+
+CREATE OR REPLACE SCHEMA ANALYTICS;
+
 -- Switching to the new role, warehouse, and database
 USE WAREHOUSE INSURE_WH;
 USE ROLE INSURED_ROLE;
@@ -42,15 +48,16 @@ USE DATABASE INSURE_DB;
 
 -- Table Creation for Claims Data
 CREATE OR REPLACE TABLE INSURE_DB.RAW.CLAIMS_TABLE (
-    CLAIM_ID STRING,                -- Keeping as STRING if alphanumeric
-    POLICY_ID STRING,               -- Keeping as STRING for potential non-numeric formats
-    CUSTOMER_ID STRING,             -- Keeping as STRING for consistency with customer identifiers
-    CLAIM_AMOUNT NUMBER(18, 2),     -- Storing as numeric with 2 decimal places
-    CLAIM_DATE DATE,                -- Using DATE for proper date operations
-    INCIDENT_DATE DATE,             -- Using DATE for proper date operations
-    CLAIM_TYPE STRING,              -- Typically categorical text
-    STATUS STRING,                  -- Status like 'Approved', 'Pending', etc.
-    ADJUSTER_NOTES STRING           -- Free-text notes
+    CLAIM_ID STRING NOT NULL,                -- surrogate key, text identifier
+    POLICY_ID STRING NOT NULL,               -- foreign key to policy
+    CUSTOMER_ID STRING NOT NULL,             -- foreign key to customer
+    CLAIM_AMOUNT NUMBER(12,2),               -- money values, up to 999,999,999,999.99
+    CLAIM_DATE DATE,                         -- actual claim filing date
+    INCIDENT_DATE DATE,                      -- date incident occurred
+    CLAIM_TYPE STRING,                       -- e.g. 'AUTO', 'HOME', 'HEALTH'
+    STATUS STRING,                           -- e.g. 'OPEN', 'CLOSED', 'PENDING'
+    ADJUSTER_NOTES STRING,                   -- free text notes (no need for max VARCHAR)
+    LOAD_TS TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP -- ingestion timestamp
 );
 
 -- Create CSV file format

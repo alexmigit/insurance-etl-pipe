@@ -1,5 +1,6 @@
 import snowflake.connector
 from config.config import config
+from datetime import datetime
 
 def get_connection():
     """
@@ -20,27 +21,29 @@ def get_connection():
     return conn
 
 def load_to_snowflake(df, table_name):
-    conn= get_connection()
+    conn = get_connection()
     cursor = conn.cursor()
 
-    # Create table if it does not exist
+    # Create table if it does not exist (adding LOAD_TS column)
     columns = ", ".join([f"{col} STRING" for col in df.columns])
-    create_table_query = (f"""
+    create_table_query = f"""
         CREATE TABLE IF NOT EXISTS {table_name} (
-            {columns}
-        );   
-    """)
-    cursor.execute(create_table_query)              
+            {columns},
+            LOAD_TS TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP
+        );
+    """
+    cursor.execute(create_table_query)
 
     # Insert data into the table
     for _, row in df.iterrows():
-        # Prepare the insert query with placeholders for each column
-        # Using %s as a placeholder for each value to prevent SQL injection
-        placeholders = ", ".join(["%s"] * len(row))
-        # Construct the insert query using the table name and placeholders
-        # The row values will be passed as a tuple to the execute method
-        insert_query = f"INSERT INTO {table_name} VALUES ({placeholders})"
-        cursor.execute(insert_query, tuple(row))       
+        # Add placeholders for DF columns + LOAD_TS
+        placeholders = ", ".join(["%s"] * len(row)) + ", CURRENT_TIMESTAMP"
+        
+        # Construct insert query (DF columns only, LOAD_TS is auto-inserted)
+        insert_query = f"INSERT INTO {table_name} ({', '.join(df.columns)}, LOAD_TS) VALUES ({placeholders})"
+        
+        # Execute insert query with DF row values
+        cursor.execute(insert_query, tuple(row))
 
     cursor.close()
     conn.close()
