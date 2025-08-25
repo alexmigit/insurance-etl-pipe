@@ -1,11 +1,17 @@
-# insurance-etl-pipe
-Insurance ETL Pipeline
+# What
+Insurance ETL Pipeline (insurance-etl-pipe)
 
-# Setup
+# Setup Snowflake
 Run setup_snowflake.sql script in Snowflake Worksheet
 
-pip install -r requirements.txt in CLI
+# Virtual Environment
+python -m venv venv
+
+# Activate venv
+source venv/bin/activate
+
+# Install Dependencies
+pip install -r requirements.txt
 
 # Run
-
-python main.py in CLI
+python main.py
