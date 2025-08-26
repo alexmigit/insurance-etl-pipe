@@ -1,6 +1,6 @@
 with raw as (
     select *
-    from {{ source('raw', 'claims') }}
+    from {{ source('raw', 'claims_table') }}
 )
 select
     claim_id,
