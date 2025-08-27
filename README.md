@@ -13,5 +13,8 @@ source venv/bin/activate
 # Install Dependencies
 pip install -r requirements.txt
 
+# Create environment file in root
+.env
+
 # Run
 python main.py
