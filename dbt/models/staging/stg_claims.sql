@@ -1,9 +1,14 @@
-{{ config(
-    materialized = "view",
-    schema = "staging"
-) }}
+{{ 
+    config(
+        materialized = "view",
+        schema = "staging"
+    ) 
+}}
 
-with raw as (
+with 
+
+raw as (
+    
     select
         claim_id,
         policy_id,
@@ -14,17 +19,24 @@ with raw as (
         claim_type,
         status,
         adjuster_notes
+    
     from {{ source('raw', 'claims_table') }}
+
 ),
+
 seeded as (
+
     select
         customer_id,
         customer_name,
         customer_address,
         customer_dob,
         customer_segment
+
     from {{ ref('sample_customers') }}
+
 )
+
 select
     r.claim_id,
     r.policy_id,
@@ -39,6 +51,9 @@ select
     r.claim_type,
     r.status,
     r.adjuster_notes
+
 from raw r
+
 join seeded s
+
 on r.customer_id = s.customer_id

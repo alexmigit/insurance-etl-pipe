@@ -5,7 +5,7 @@ Insurance ETL Pipeline (insurance-etl-pipe)
 Run setup_snowflake.sql script in Snowflake Worksheet
 
 # Virtual Environment
-python -m venv venv
+python -m venv .venv
 
 # Activate venv
 source venv/bin/activate

@@ -4,4 +4,5 @@ select distinct
     customer_address,
     customer_dob,
     customer_segment
+    
 from {{ ref('stg_claims') }}

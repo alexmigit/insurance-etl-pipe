@@ -7,4 +7,5 @@ select distinct
     premium_amount,
     status,
     agent_id
+    
 from {{ ref('sample_policy') }}
