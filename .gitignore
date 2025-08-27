@@ -212,6 +212,7 @@ logs/
 
 # dbt packages and dependencies
 dbt_packages/
+dbt_internal_packages/
 # Legacy entry for older dbt versions (renamed to dbt_packages in dbt v1)
 dbt_modules/ 
 
