@@ -1,7 +1,10 @@
 select distinct
     policy_id,
+    customer_id,
     policy_type,
-    policy_start_date,
-    policy_end_date,
-    premium_amount
-from {{ ref('stg_claims') }}
+    effective_date,
+    expiration_date,
+    premium_amount,
+    status,
+    agent_id
+from {{ ref('sample_policy') }}

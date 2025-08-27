@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fact_claims
+    description: "Fact table summarizing insurance claims by policy and customer"
+    columns:
+      - name: policy_id
+        tests:
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: total_claims
+        description: "Number of claims per policy-customer"
+      - name: total_claim_amount
+        description: "Total claim payout per policy-customer"
