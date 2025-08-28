@@ -1,4 +1,4 @@
-version: 2
+version: 3
 
 models:
   - name: dim_customer
@@ -19,7 +19,7 @@ models:
     description: "Policy dimension with insurance policy details"
     columns:
       - name: policy_id
-      description: "Business natural key for policy"
+        description: "Business natural key for policy"
         tests:
           - not_null
           - unique
@@ -29,12 +29,14 @@ models:
         description: "Policy status (Active, Expired, Cancelled)"
         tests:
           - accepted_values:
-              values: ['Active', 'Expired', 'Cancelled']
+              arguments:
+                values: ['Active', 'Expired', 'Cancelled']
       - name: premium_amount
         description: "Premium amount for the policy"  
         tests:
           - dbt_utils.expression_is_true:
-              expression: "premium_amount >= 0"
+              arguments:
+                expression: "premium_amount >= 0"
 
   - name: fact_claims
     description: "Claims fact table linking customers, policies, and dates"
@@ -53,16 +55,18 @@ models:
         description: "FK to dim_policy"
         tests:
           - relationships:
-              to: ref('dim_policy')
-              field: policy_sk
+              arguments:
+                to: ref('dim_policy')
+                field: policy_sk
       - name: customer_sk
-        description: "FK to dim_customer"
         tests:
           - relationships:
-              to: ref('dim_customer')
-              field: customer_sk
+              arguments:
+                to: ref('dim_customer')
+                field: customer_sk
       - name: total_claim_amount
         description: "Total amount claimed"
         tests:
           - dbt_utils.expression_is_true:
-              expression: "total_claim_amount >= 0"
+              arguments:
+                expression: "total_claim_amount >= 0"
