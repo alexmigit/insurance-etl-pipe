@@ -62,6 +62,7 @@ with_dim_keys as (
 
 select
     {{ dbt_utils.generate_surrogate_key(['policy_id','customer_id','claim_id']) }} as claim_fact_id,
+    claim_id,
     policy_id,
     customer_id,
     policy_sk,

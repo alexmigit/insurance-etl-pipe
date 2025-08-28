@@ -27,7 +27,7 @@ def load_to_snowflake(df: pd.DataFrame, target_table: str):
     # Create target table if not exists
     create_target = f"""
     CREATE TABLE IF NOT EXISTS {target_table} (
-        CLAIM_ID STRING PRIMARY KEY,
+        CLAIM_ID VARCHAR(25) PRIMARY KEY,
         POLICY_ID STRING,
         CUSTOMER_ID STRING,
         CLAIM_AMOUNT STRING,
