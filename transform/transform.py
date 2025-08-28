@@ -24,8 +24,16 @@ def transform_claims(df):
         # Drop duplicate claims based on 'claim_id'
         df = df.drop_duplicates(subset='claim_id')
 
+        # Drop duplicate policies based on 'policy_id'
+        df = df.drop_duplicated(subset='policy_id')
+
         # Fill missing values in 'adjuster_notes' with a default message
         df['adjuster_notes'] = df['adjuster_notes'].fillna("No notes provided")
+
+        # Convert date columns to datetime format
+        date_cols = ['claim_date', 'incident_date']
+        for col in date_cols:
+            df[col] = pd.to_datetime(df[col], errors='coerce')
 
         return df
     
