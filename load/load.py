@@ -27,16 +27,16 @@ def load_to_snowflake(df: pd.DataFrame, target_table: str):
     # Create target table if not exists
     create_target = f"""
     CREATE TABLE IF NOT EXISTS {target_table} (
-        CLAIM_ID VARCHAR(25) PRIMARY KEY,
-        POLICY_ID STRING,
-        CUSTOMER_ID STRING,
-        CLAIM_AMOUNT STRING,
-        CLAIM_DATE STRING,
-        INCIDENT_DATE STRING,
-        CLAIM_TYPE STRING,
-        STATUS STRING,
-        ADJUSTER_NOTES STRING,
-        LOAD_TS TIMESTAMP_NTZ
+        CLAIM_ID VARCHAR(10) PRIMARY KEY,
+        POLICY_ID VARCHAR(10),
+        CUSTOMER_ID VARCHAR(10),
+        CLAIM_AMOUNT NUMBER(12,2),
+        CLAIM_DATE DATE,
+        INCIDENT_DATE DATE,
+        CLAIM_TYPE VARCHAR(25),
+        STATUS VARCHAR(25),
+        ADJUSTER_NOTES VARCHAR(1000),
+        LOAD_TS TIMESTAMP_NTZ(9) DEFAULT CURRENT_TIMESTAMP()
     )
     """
     cursor.execute(create_target)
