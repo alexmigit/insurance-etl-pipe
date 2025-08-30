@@ -3,6 +3,7 @@ from transform.transform import transform_claims
 from load.load import load_to_snowflake
 from utils.logger import logger
 from utils.notify import send_slack_notification
+#from data.gen_claims import generate_synthetic_claims
 
 def main():
     """
@@ -12,6 +13,9 @@ def main():
     try:
         logger.info("Starting ETL pipeline...")
         send_slack_notification(":repeat: Insurance ETL pipeline started.")
+
+        # Generate synthetic claims data (if needed)
+        #generate_synthetic_claims("data/claims.csv", num_new_claims=200, duplicate_rate=0.05)
 
         # Extract data from CSV
         df_raw = extract_claims_from_csv("data/claims.csv")

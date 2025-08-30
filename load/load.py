@@ -99,7 +99,7 @@ def load_to_snowflake(df: pd.DataFrame, target_table: str):
     cursor.execute(f"SELECT COUNT(*), COUNT(CLAIM_ID) FROM {staging_table}")
     print("📊 Row counts in staging (total, with_claim_id):", cursor.fetchone())
 
-    # MERGE staging → target
+    # MERGE staging → target (idempotent upsert) with row count
     merge_query = f"""
     MERGE INTO {target_table} t
     USING {staging_table} s
