@@ -11,7 +11,7 @@ def main():
     """
     try:
         logger.info("Starting ETL pipeline...")
-        send_slack_notification("🟢 Insurance ETL pipeline started.")
+        send_slack_notification(":repeat: Insurance ETL pipeline started.")
 
         # Extract data from CSV
         df_raw = extract_claims_from_csv("data/claims.csv")
@@ -22,7 +22,7 @@ def main():
         logger.info("Data transformation completed successfully.")
 
         # Load data to Snowflake        
-        load_to_snowflake(transformed_df, "claims_table")
+        load_to_snowflake(transformed_df, "raw_claims")
         logger.info("Data loaded to Snowflake successfully.")
 
         # Send notification to Slack

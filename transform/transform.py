@@ -11,32 +11,32 @@ def transform_claims(df):
         pd.DataFrame: A transformed DataFrame with cleaned and processed claims data.
     """
     try:
-        # Convert all column names to lowercase
-        df.columns = [col.lower() for col in df.columns]
+        # Optional: normalize columns first
+        df.columns = df.columns.str.strip().str.lower()
 
-        # Ensure numeric columns are of type float
+        # Numeric columns
         numeric_cols = df.select_dtypes(include=['int64', 'float64']).columns
         df[numeric_cols] = df[numeric_cols].astype(float)
 
-        # Fill NaN values in claim_amount column with 0   
+        # Fill NaN claim_amount
         df['claim_amount'] = df['claim_amount'].fillna(0)
 
-        # Drop duplicate claims based on 'claim_id'
+        # Deduplicate by CLAIM_ID only
         df = df.drop_duplicates(subset='claim_id')
 
-        # Drop duplicate policies based on 'policy_id'
-        df = df.drop_duplicated(subset='policy_id')
-
-        # Fill missing values in 'adjuster_notes' with a default message
+        # Fill missing adjuster_notes
         df['adjuster_notes'] = df['adjuster_notes'].fillna("No notes provided")
 
-        # Convert date columns to datetime format
+        # Convert date columns
         date_cols = ['claim_date', 'incident_date']
         for col in date_cols:
             df[col] = pd.to_datetime(df[col], errors='coerce')
 
+        # Rename columns to match loader expectations (all caps)
+        df.columns = [col.upper() for col in df.columns]
+
         return df
-    
+
     except Exception as e:
         print(f"Error transforming DataFrame: {e}")
-        return pd.DataFrame()  # Return an empty DataFrame on error
+        return pd.DataFrame()
