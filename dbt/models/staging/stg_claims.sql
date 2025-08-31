@@ -20,7 +20,7 @@ raw as (
         status,
         adjuster_notes
     
-    from {{ source('raw', 'claims_table') }}
+    from {{ source('raw', 'raw_claims') }}
 
 ),
 

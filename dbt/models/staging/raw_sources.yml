@@ -2,7 +2,90 @@ version: 2
 
 sources:
   - name: raw
-    database: INSURE_DB
-    schema: RAW
+    description: "Raw source tables for the insurance analytics project"
+    database: insure_db
+    schema: raw
     tables:
-      - name: claims_table
+      - name: raw_claims
+        description: "Raw claims data from source system"
+        columns:
+          - name: claim_id
+            description: "Unique claim identifier"
+          - name: policy_id
+            description: "Associated policy identifier"
+          - name: claim_date
+            description: "Date claim was filed"
+          - name: claim_amount
+            description: "Amount claimed"
+          - name: claim_status
+            description: "Status of claim (open, closed, pending)"
+
+      - name: raw_policy
+        description: "Raw policy data from source system"
+        columns:
+          - name: policy_id
+            description: "Unique policy identifier"
+          - name: customer_id
+            description: "Customer associated with policy"
+          - name: agent_id
+            description: "Agent responsible for policy"
+          - name: policy_type
+            description: "Type of policy (auto, home, etc.)"
+          - name: effective_date
+            description: "Policy effective start date"
+          - name: expiration_date
+            description: "Policy expiration date"
+          - name: premium_amount
+            description: "Premium charged"
+          - name: status
+            description: "Current status of policy"
+
+      - name: raw_customer
+        description: "Raw customer data"
+        columns:
+          - name: customer_id
+            description: "Unique customer identifier"
+          - name: first_name
+            description: "Customer first name"
+          - name: last_name
+            description: "Customer last name"
+          - name: email
+            description: "Customer email"
+          - name: phone
+            description: "Customer phone number"
+          - name: date_of_birth
+            description: "Customer DOB"
+          - name: city
+            description: "Customer city"
+          - name: state
+            description: "Customer state"
+
+      - name: raw_agent
+        description: "Raw agent data"
+        columns:
+          - name: agent_id
+            description: "Unique agent identifier"
+          - name: agent_name
+            description: "Name of agent"
+          - name: email
+            description: "Agent email"
+          - name: phone
+            description: "Agent phone number"
+          - name: office_location
+            description: "Office location"
+
+      - name: raw_payments
+        description: "Raw payments data"
+        columns:
+          - name: payment_id
+            description: "Unique payment identifier"
+          - name: policy_id
+            description: "Policy associated with payment"
+          - name: customer_id
+            description: "Customer making payment"
+          - name: payment_date
+            description: "Date of payment"
+          - name: payment_amount
+            description: "Amount paid"
+          - name: payment_method
+            description: "Payment method (card, bank transfer, etc.)"

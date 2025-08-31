@@ -1,4 +1,4 @@
-name: 'insurance_etl'
+name: 'insure_db'
 version: '1.0.0'
 config-version: 2
 
