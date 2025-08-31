@@ -219,3 +219,6 @@ dbt_modules/
 # IDE-specific files (optional, depending on your IDE)
 .idea/
 .vscode/
+
+# MacOS system files
+.DS_Store
