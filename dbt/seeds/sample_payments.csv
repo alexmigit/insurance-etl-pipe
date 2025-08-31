@@ -1,0 +1,6 @@
+payment_id,policy_id,claim_id,payment_date,amount,payment_type
+1001,1,,2024-01-05,1200.0,premium
+1002,2,,2023-06-20,900.0,premium
+1003,1,501.0,2024-07-15,5000.0,payout
+1004,3,,2022-03-10,1500.0,premium
+1005,4,502.0,2024-06-01,2000.0,payout
