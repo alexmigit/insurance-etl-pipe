@@ -18,3 +18,6 @@ pip install -r requirements.txt
 
 # Run
 python main.py
+
+# dbt
+set -a; source .env; set +a; dbt run
