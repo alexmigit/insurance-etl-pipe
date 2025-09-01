@@ -1,32 +1,51 @@
+{{ 
+    config(
+        materialized='view'
+    ) 
+}}
+
 with 
 
-base as (
+policies as (
 
     select * from {{ ref('stg_policy') }}
 
 ),
 
-with_agent as (
+customers as (
 
-    select
-        p.policy_id,
-        p.customer_id,
-        p.policy_type,
-        p.effective_date,
-        p.expiration_date,
-        p.premium_amount,
-        p.status,
-        p.agent_id,
-        a.agent_name,
-        a.region
+    select * from {{ ref('stg_customer') }}
 
-    from base p
+),
 
-    left join {{ ref('stg_agent') }} a
-      on p.agent_id = a.agent_id
+agents as (
+
+    select * from {{ ref('stg_agent') }}
 
 )
 
-select *
+select
+    p.policy_id,
+    p.customer_id,
+    c.first_name || ' ' || c.last_name as customer_name,
+    c.email as customer_email,
+    c.phone as customer_phone,
+    c.address as customer_address,
+    --c.city as customer_city,
+    --c.state as customer_state,
+    p.agent_id,
+    a.agent_name,
+    a.region as agent_region,
+    p.policy_type,
+    p.effective_date,
+    p.expiration_date,
+    p.premium_amount,
+    p.status
 
-from with_agent
+from policies p
+
+left join customers c
+    on p.customer_id = c.customer_id
+
+left join agents a
+    on p.agent_id = a.agent_id

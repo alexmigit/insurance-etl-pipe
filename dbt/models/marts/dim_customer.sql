@@ -17,6 +17,7 @@ customers as (
         customer_segment
 
     from {{ ref('sample_customers') }}
+    
 )
 
 select
