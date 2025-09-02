@@ -1,0 +1,205 @@
+CUSTOMER_ID,FIRST_NAME,LAST_NAME,DATE_OF_BIRTH,GENDER,EMAIL,PHONE,ADDRESS,CITY,STATE,ZIP_CODE
+CUST1001,Michael,Brown,1942-05-10,M,michael.brown206@example.com,(271)-900-6734,6365 Pine Ave,Columbus,MI,54131
+CUST1002,Linda,Davis,1962-10-14,F,linda.davis408@example.com,(969)-543-7949,2533 Maple Rd,Chicago,CA,63707
+CUST1003,Elizabeth,Garcia,1957-07-06,F,elizabeth.garcia956@example.com,(760)-674-3558,7949 Maple Rd,New York,OH,76803
+CUST1004,William,Williams,1949-09-26,M,william.williams746@example.com,(220)-366-6393,8892 Maple Rd,Austin,NC,86552
+CUST1005,Elizabeth,Jones,2001-12-05,M,elizabeth.jones554@example.com,(627)-708-1775,8326 Main St,Miami,TX,79479
+CUST1006,Patricia,Johnson,1942-10-18,F,patricia.johnson665@example.com,(305)-971-8989,9792 Oak St,Charlotte,TX,47065
+CUST1007,Patricia,Davis,1960-11-20,M,patricia.davis351@example.com,(901)-495-8892,6963 Cedar Blvd,Austin,IL,96807
+CUST1008,Elizabeth,Martinez,1998-02-28,F,elizabeth.martinez479@example.com,(692)-240-6276,2162 Cedar Blvd,Sacramento,GA,50774
+CUST1009,William,Davis,1945-07-20,F,william.davis571@example.com,(262)-338-6618,6836 Pine Ave,New York,CA,22666
+CUST1010,Robert,Hernandez,1956-12-06,F,robert.hernandez234@example.com,(400)-979-4104,7315 Cedar Blvd,New York,MI,20965
+CUST1011,John,Smith,1980-12-04,M,john.smith561@example.com,(842)-968-2028,7485 Pine Ave,Atlanta,NC,33419
+CUST1012,John,Miller,1963-12-21,M,john.miller195@example.com,(933)-684-8574,6474 Cedar Blvd,Miami,OH,85450
+CUST1013,John,Garcia,2001-01-19,F,john.garcia781@example.com,(756)-773-3693,3727 Maple Rd,Charlotte,OH,25707
+CUST1014,William,Miller,1943-07-30,F,william.miller732@example.com,(827)-944-8526,9001 Pine Ave,Atlanta,IL,23545
+CUST1015,Linda,Garcia,1988-12-13,M,linda.garcia791@example.com,(312)-696-7585,1391 Oak St,New York,CA,77172
+CUST1016,James,Davis,1986-10-08,M,james.davis101@example.com,(841)-419-1854,8264 Main St,Sacramento,NY,56717
+CUST1017,Mary,Jones,1989-07-13,F,mary.jones771@example.com,(909)-615-5931,3610 Pine Ave,Detroit,CA,35342
+CUST1018,Jennifer,Davis,1961-11-30,F,jennifer.davis709@example.com,(397)-710-7287,8900 Main St,Philadelphia,NY,59811
+CUST1019,Patricia,Williams,1945-06-09,M,patricia.williams246@example.com,(347)-910-2843,8780 Main St,Detroit,OH,21111
+CUST1020,James,Martinez,1958-02-11,F,james.martinez250@example.com,(614)-497-1262,6387 Oak St,Atlanta,FL,87371
+CUST1072,James,Johnson,1954-11-06,F,james.johnson751@example.com,(652)-236-8158,7500 Pine Ave,New York,NY,14499
+CUST1064,Linda,Garcia,1973-05-10,F,linda.garcia686@example.com,(824)-619-5199,8545 Pine Ave,Atlanta,NY,12200
+CUST1039,Mary,Johnson,1972-10-08,F,mary.johnson262@example.com,(919)-880-9352,5799 Main St,Chicago,FL,68871
+CUST1027,Linda,Miller,1943-05-03,M,linda.miller739@example.com,(232)-887-5555,9246 Pine Ave,Philadelphia,OH,27429
+CUST1022,Jennifer,Garcia,1949-05-29,M,jennifer.garcia537@example.com,(975)-482-1225,4993 Main St,Sacramento,IL,50764
+CUST1098,John,Brown,1952-09-16,F,john.brown148@example.com,(711)-216-8339,9535 Cedar Blvd,Chicago,PA,57202
+CUST1086,William,Jones,1991-03-25,M,william.jones596@example.com,(501)-380-1606,3270 Maple Rd,Sacramento,FL,75726
+CUST1079,Robert,Miller,1988-02-06,F,robert.miller422@example.com,(327)-217-2816,5954 Oak St,New York,MI,61885
+CUST1049,Linda,Johnson,1960-05-30,M,linda.johnson953@example.com,(862)-838-1154,1509 Oak St,Sacramento,MI,88069
+CUST1057,Michael,Hernandez,1992-07-16,F,michael.hernandez966@example.com,(607)-724-7971,5725 Main St,Miami,FL,12368
+CUST1054,Linda,Williams,2002-12-19,M,linda.williams191@example.com,(553)-926-1853,4246 Main St,Charlotte,PA,65609
+CUST1091,Elizabeth,Garcia,1967-02-15,F,elizabeth.garcia937@example.com,(982)-253-3491,3224 Maple Rd,Chicago,OH,97235
+CUST1043,Jennifer,Brown,1951-05-05,M,jennifer.brown922@example.com,(855)-468-5465,735 Oak St,New York,CA,83847
+CUST1058,John,Hernandez,1979-01-18,F,john.hernandez840@example.com,(673)-316-6949,2938 Main St,Chicago,CA,76617
+CUST1046,Elizabeth,Smith,1976-09-15,F,elizabeth.smith217@example.com,(759)-800-8404,3443 Cedar Blvd,Columbus,IL,69638
+CUST1073,John,Hernandez,1944-08-06,M,john.hernandez185@example.com,(896)-484-6188,2241 Maple Rd,Chicago,NC,45247
+CUST1037,Robert,Miller,1952-03-10,M,robert.miller861@example.com,(721)-957-3849,7490 Oak St,Charlotte,NY,19823
+CUST1085,James,Davis,1966-02-13,M,james.davis615@example.com,(215)-991-9527,5978 Oak St,Sacramento,FL,28071
+CUST1092,Mary,Williams,1946-08-24,M,mary.williams790@example.com,(626)-812-6387,8102 Main St,Sacramento,MI,79449
+CUST1078,Mary,Williams,1945-09-13,M,mary.williams948@example.com,(289)-975-7748,9917 Oak St,New York,GA,30358
+CUST1089,Patricia,Hernandez,1955-09-24,M,patricia.hernandez174@example.com,(612)-575-8587,828 Cedar Blvd,Atlanta,FL,54425
+CUST1029,Robert,Martinez,1948-02-15,F,robert.martinez838@example.com,(888)-298-5079,1671 Oak St,Sacramento,OH,44911
+CUST1034,Linda,Miller,1960-02-22,F,linda.miller136@example.com,(979)-568-4766,5744 Main St,New York,GA,65069
+CUST1088,James,Smith,1979-06-02,F,james.smith979@example.com,(928)-541-5492,798 Pine Ave,Sacramento,FL,26779
+CUST1069,William,Williams,1951-06-03,M,william.williams554@example.com,(995)-917-3782,5046 Oak St,Chicago,IL,99112
+CUST1050,Patricia,Jones,1960-12-12,M,patricia.jones250@example.com,(343)-768-2062,2256 Cedar Blvd,Charlotte,NC,21174
+CUST1052,Elizabeth,Jones,1954-08-09,M,elizabeth.jones334@example.com,(857)-950-7731,7341 Oak St,Sacramento,PA,11542
+CUST1084,Linda,Hernandez,1992-03-13,F,linda.hernandez616@example.com,(228)-364-6541,9680 Main St,Philadelphia,FL,67854
+CUST1045,Michael,Martinez,1943-08-17,F,michael.martinez903@example.com,(269)-451-4486,1910 Cedar Blvd,Philadelphia,OH,35289
+CUST1071,Elizabeth,Williams,1982-05-25,M,elizabeth.williams272@example.com,(852)-953-4709,9373 Maple Rd,Detroit,GA,52918
+CUST1062,James,Williams,1967-11-23,F,james.williams289@example.com,(704)-390-2531,7676 Main St,Philadelphia,IL,77641
+CUST1090,Robert,Garcia,1970-02-15,M,robert.garcia775@example.com,(426)-858-7190,1356 Main St,Sacramento,IL,78866
+CUST1030,Michael,Martinez,1959-06-24,F,michael.martinez429@example.com,(935)-983-6063,8649 Maple Rd,Detroit,IL,39703
+CUST1055,Elizabeth,Brown,1950-03-08,F,elizabeth.brown415@example.com,(377)-739-5964,4935 Pine Ave,Philadelphia,CA,48088
+CUST1038,James,Jones,1947-08-11,F,james.jones657@example.com,(746)-452-6713,7126 Cedar Blvd,Atlanta,TX,75545
+CUST1021,Linda,Johnson,1954-01-11,M,linda.johnson900@example.com,(573)-264-3193,8515 Main St,Chicago,NC,14158
+CUST1060,William,Garcia,1959-01-31,M,william.garcia788@example.com,(660)-809-8266,8802 Main St,Chicago,OH,39189
+CUST1419,James,Jones,1966-12-30,F,james.jones870@example.com,(636)-222-8140,3736 Cedar Blvd,Charlotte,NC,63330
+CUST1404,James,Jones,2002-12-05,F,james.jones100@example.com,(250)-884-1716,8039 Main St,Sacramento,MI,46187
+CUST1490,Linda,Miller,1979-09-02,F,linda.miller773@example.com,(637)-317-1770,4463 Main St,Philadelphia,IL,34285
+CUST1224,William,Smith,1997-10-11,M,william.smith402@example.com,(406)-428-7996,4773 Pine Ave,New York,OH,91317
+CUST1189,Mary,Garcia,1966-01-25,F,mary.garcia949@example.com,(997)-534-8002,1431 Main St,Philadelphia,CA,52318
+CUST1211,Michael,Hernandez,1968-04-03,M,michael.hernandez896@example.com,(337)-383-4472,5549 Main St,Miami,MI,83477
+CUST1174,Robert,Johnson,1951-10-10,F,robert.johnson846@example.com,(242)-951-2906,6354 Main St,Columbus,OH,90719
+CUST1194,Jennifer,Davis,1974-08-17,F,jennifer.davis795@example.com,(480)-394-2887,3366 Pine Ave,Austin,NC,21314
+CUST1470,John,Jones,1998-11-20,F,john.jones703@example.com,(881)-733-7981,6476 Maple Rd,Charlotte,TX,91818
+CUST1320,William,Hernandez,1968-09-18,M,william.hernandez220@example.com,(413)-438-7493,2978 Cedar Blvd,Sacramento,NC,74291
+CUST1112,James,Davis,1978-10-26,M,james.davis791@example.com,(918)-502-1638,155 Oak St,Columbus,MI,26748
+CUST1450,Elizabeth,Davis,1954-01-13,M,elizabeth.davis722@example.com,(949)-562-6870,1631 Cedar Blvd,Austin,NC,98869
+CUST1300,John,Williams,1948-06-13,F,john.williams730@example.com,(684)-227-9905,1162 Main St,Sacramento,OH,16229
+CUST1111,Elizabeth,Martinez,1957-03-20,M,elizabeth.martinez311@example.com,(224)-779-8561,8358 Main St,Austin,FL,36069
+CUST1104,Mary,Davis,1973-05-26,M,mary.davis847@example.com,(794)-753-3472,2839 Oak St,Austin,MI,86090
+CUST1407,Jennifer,Jones,1988-11-08,F,jennifer.jones376@example.com,(909)-781-6622,6867 Maple Rd,Detroit,OH,23046
+CUST1094,John,Williams,1947-02-03,F,john.williams328@example.com,(747)-422-1005,7589 Maple Rd,Miami,PA,10117
+CUST1330,James,Davis,1979-03-06,M,james.davis673@example.com,(640)-393-1846,6416 Maple Rd,Chicago,PA,40105
+CUST1360,Jennifer,Brown,1985-06-21,F,jennifer.brown212@example.com,(339)-758-3048,6333 Cedar Blvd,Miami,NY,30128
+CUST1113,Jennifer,Johnson,1940-01-10,M,jennifer.johnson749@example.com,(371)-212-6287,1719 Main St,Chicago,GA,29216
+CUST1311,William,Davis,1949-07-22,F,william.davis194@example.com,(780)-517-1235,2008 Pine Ave,Atlanta,TX,94555
+CUST1040,John,Williams,1991-11-13,F,john.williams419@example.com,(771)-548-9007,9164 Cedar Blvd,New York,IL,25524
+CUST1273,Robert,Williams,1940-03-18,F,robert.williams673@example.com,(331)-800-2065,2236 Oak St,Detroit,MI,85046
+CUST1296,Linda,Williams,1961-05-14,F,linda.williams964@example.com,(222)-774-3190,9284 Main St,Sacramento,CA,21246
+CUST1397,Michael,Johnson,1990-04-29,M,michael.johnson715@example.com,(303)-238-2970,8489 Pine Ave,Columbus,NY,34519
+CUST1215,Elizabeth,Brown,1982-02-03,M,elizabeth.brown768@example.com,(488)-677-1922,519 Cedar Blvd,Philadelphia,GA,76656
+CUST1164,Robert,Miller,1946-05-25,F,robert.miller295@example.com,(797)-721-5612,1965 Main St,Philadelphia,PA,65180
+CUST1365,Patricia,Davis,1961-07-12,M,patricia.davis256@example.com,(847)-460-3371,2991 Cedar Blvd,Austin,NY,49666
+CUST1187,Patricia,Brown,1942-03-04,M,patricia.brown382@example.com,(268)-859-7166,914 Oak St,Charlotte,MI,27368
+CUST1137,James,Davis,1942-04-07,M,james.davis559@example.com,(555)-523-4876,6059 Oak St,Sacramento,NC,65176
+CUST1434,Jennifer,Williams,1959-09-14,F,jennifer.williams395@example.com,(496)-925-2792,5832 Cedar Blvd,Charlotte,FL,29256
+CUST1403,James,Garcia,1952-10-06,M,james.garcia760@example.com,(630)-508-9393,3607 Main St,Chicago,NC,23224
+CUST1075,John,Brown,1986-04-29,F,john.brown174@example.com,(585)-409-9666,8709 Pine Ave,Sacramento,NY,77526
+CUST1355,Patricia,Garcia,1994-08-21,F,patricia.garcia260@example.com,(376)-484-5757,2813 Maple Rd,Austin,IL,37696
+CUST1056,Michael,Smith,1976-09-03,M,michael.smith788@example.com,(347)-829-9533,5282 Cedar Blvd,Detroit,CA,30806
+CUST1217,James,Miller,1946-10-18,M,james.miller822@example.com,(517)-231-3717,4624 Cedar Blvd,Detroit,NY,28449
+CUST1110,James,Williams,1982-07-13,F,james.williams293@example.com,(701)-312-6797,9238 Maple Rd,Sacramento,MI,22342
+CUST1292,Michael,Williams,1975-10-31,F,michael.williams557@example.com,(361)-579-1054,7743 Oak St,Columbus,MI,86534
+CUST1105,John,Davis,1969-03-31,M,john.davis427@example.com,(253)-960-4310,3400 Pine Ave,New York,CA,95595
+CUST1306,Linda,Johnson,1961-10-27,F,linda.johnson187@example.com,(277)-487-3538,4647 Maple Rd,Chicago,PA,96925
+CUST1458,Michael,Johnson,1956-11-02,F,michael.johnson874@example.com,(872)-350-5242,3795 Cedar Blvd,New York,FL,60460
+CUST1298,Mary,Johnson,1967-09-08,M,mary.johnson808@example.com,(722)-945-2409,4666 Maple Rd,Miami,IL,43572
+CUST1048,Jennifer,Martinez,1959-05-24,M,jennifer.martinez599@example.com,(705)-563-3679,2206 Main St,Austin,NY,37856
+CUST1438,William,Davis,1951-01-16,M,william.davis380@example.com,(558)-400-6877,1401 Pine Ave,Miami,NC,86908
+CUST1024,Mary,Miller,1964-08-18,M,mary.miller937@example.com,(345)-327-6475,8332 Oak St,Sacramento,IL,88411
+CUST1388,Michael,Jones,1962-01-06,F,michael.jones126@example.com,(486)-845-5263,8901 Maple Rd,Atlanta,IL,84182
+CUST1136,Elizabeth,Smith,1948-02-17,M,elizabeth.smith575@example.com,(901)-833-4629,4325 Maple Rd,Philadelphia,CA,29250
+CUST1405,Robert,Brown,1999-11-21,F,robert.brown128@example.com,(348)-978-6415,7779 Maple Rd,Sacramento,OH,38769
+CUST1257,Michael,Davis,1953-04-15,F,michael.davis168@example.com,(511)-488-8715,9042 Maple Rd,New York,NY,41987
+CUST1192,James,Johnson,1979-10-19,F,james.johnson549@example.com,(700)-272-3343,5236 Main St,Atlanta,MI,65337
+CUST1023,William,Miller,1973-12-31,F,william.miller328@example.com,(307)-371-4549,4297 Oak St,New York,IL,79626
+CUST1146,James,Smith,1985-10-04,M,james.smith922@example.com,(696)-211-2341,8507 Pine Ave,Detroit,IL,21344
+CUST1448,Michael,Jones,1946-08-18,F,michael.jones809@example.com,(399)-736-7609,5487 Pine Ave,Charlotte,GA,37935
+CUST1070,Elizabeth,Miller,1963-07-11,M,elizabeth.miller893@example.com,(285)-449-1390,4530 Cedar Blvd,Columbus,GA,21122
+CUST1120,Linda,Johnson,1964-09-09,M,linda.johnson576@example.com,(793)-422-6085,2519 Pine Ave,Austin,NC,76150
+CUST1286,James,Davis,1947-04-21,F,james.davis912@example.com,(297)-330-3983,4378 Maple Rd,Columbus,MI,16640
+CUST1210,Patricia,Garcia,1987-05-18,M,patricia.garcia821@example.com,(360)-215-9684,9423 Oak St,Columbus,NY,62393
+CUST1124,Mary,Miller,1967-05-15,M,mary.miller373@example.com,(615)-807-4810,7306 Maple Rd,Sacramento,IL,72187
+CUST1259,William,Davis,1989-09-15,M,william.davis476@example.com,(465)-558-5435,3860 Pine Ave,Detroit,TX,65619
+CUST1362,Mary,Jones,1961-06-11,F,mary.jones804@example.com,(784)-598-9056,7611 Maple Rd,Charlotte,IL,55028
+CUST1129,Jennifer,Miller,1962-06-16,F,jennifer.miller944@example.com,(425)-352-8878,5790 Maple Rd,Philadelphia,IL,74754
+CUST1304,Elizabeth,Johnson,1987-02-11,F,elizabeth.johnson852@example.com,(705)-458-4845,1896 Main St,Atlanta,NY,72483
+CUST1487,Elizabeth,Smith,1967-09-02,F,elizabeth.smith518@example.com,(889)-261-8312,8294 Pine Ave,Philadelphia,MI,43660
+CUST1348,William,Martinez,1952-10-19,F,william.martinez456@example.com,(809)-466-2640,7590 Pine Ave,Atlanta,NY,98801
+CUST1220,Elizabeth,Martinez,1977-09-17,F,elizabeth.martinez636@example.com,(460)-594-1954,9275 Maple Rd,Philadelphia,MI,31754
+CUST1151,Robert,Hernandez,1964-12-05,F,robert.hernandez136@example.com,(515)-887-4020,9087 Cedar Blvd,Sacramento,TX,19516
+CUST1489,John,Hernandez,1944-05-10,F,john.hernandez965@example.com,(239)-948-2312,9577 Pine Ave,Detroit,CA,75082
+CUST1385,William,Martinez,1976-11-28,F,william.martinez290@example.com,(866)-621-5795,6250 Cedar Blvd,Charlotte,GA,59138
+CUST1478,Michael,Hernandez,1960-09-13,F,michael.hernandez462@example.com,(636)-869-4998,2503 Oak St,Columbus,TX,97263
+CUST1431,James,Martinez,1945-08-26,F,james.martinez322@example.com,(899)-647-2007,5545 Pine Ave,Columbus,NC,97272
+CUST1233,Mary,Jones,1953-12-02,F,mary.jones295@example.com,(683)-441-8491,1140 Maple Rd,Philadelphia,CA,83609
+CUST1265,Jennifer,Smith,1997-05-14,F,jennifer.smith309@example.com,(505)-469-5799,786 Cedar Blvd,Miami,NY,31427
+CUST1087,Michael,Smith,1961-05-23,M,michael.smith178@example.com,(658)-769-4356,8807 Main St,New York,GA,91958
+CUST1284,Michael,Brown,1989-11-06,F,michael.brown786@example.com,(283)-221-6658,3878 Main St,Detroit,IL,49214
+CUST1315,Robert,Brown,1984-03-03,M,robert.brown552@example.com,(586)-706-8424,1033 Oak St,New York,CA,92711
+CUST1156,Mary,Davis,1999-01-14,F,mary.davis756@example.com,(804)-508-9711,8882 Pine Ave,Austin,FL,49110
+CUST1101,John,Jones,1955-06-26,F,john.jones477@example.com,(757)-726-4224,1975 Maple Rd,Atlanta,PA,75455
+CUST1331,William,Garcia,1953-12-27,M,william.garcia216@example.com,(585)-543-1583,8686 Cedar Blvd,Sacramento,MI,36589
+CUST1282,Mary,Garcia,1956-11-06,M,mary.garcia828@example.com,(301)-624-1778,313 Pine Ave,Detroit,GA,53408
+CUST1398,William,Garcia,1983-11-10,M,william.garcia813@example.com,(441)-201-7368,2049 Main St,Miami,NC,60069
+CUST1444,Michael,Johnson,1982-07-04,M,michael.johnson189@example.com,(885)-321-4041,205 Maple Rd,Sacramento,MI,81626
+CUST1441,John,Garcia,1990-06-27,F,john.garcia172@example.com,(558)-422-1552,9007 Oak St,Miami,OH,56163
+CUST1428,Patricia,Garcia,1984-11-30,F,patricia.garcia994@example.com,(714)-326-5904,7967 Oak St,Austin,PA,82715
+CUST1081,Michael,Martinez,1977-04-08,M,michael.martinez221@example.com,(346)-766-9941,3527 Cedar Blvd,Detroit,OH,12356
+CUST1454,Michael,Williams,1994-11-22,F,michael.williams822@example.com,(861)-748-9503,3020 Pine Ave,New York,NC,18946
+CUST1488,John,Garcia,2001-07-01,M,john.garcia452@example.com,(531)-924-1158,1056 Maple Rd,Chicago,FL,35963
+CUST1249,Patricia,Davis,1983-08-04,M,patricia.davis707@example.com,(816)-619-6631,9733 Maple Rd,Philadelphia,OH,22201
+CUST1148,John,Williams,1974-02-24,F,john.williams736@example.com,(467)-842-1529,3058 Main St,New York,NC,29975
+CUST1268,Patricia,Miller,1971-08-27,F,patricia.miller625@example.com,(533)-201-1374,4748 Maple Rd,Detroit,OH,57064
+CUST1277,Patricia,Johnson,1950-06-11,F,patricia.johnson244@example.com,(227)-265-5356,5643 Maple Rd,Detroit,FL,22588
+CUST1289,Michael,Hernandez,1972-10-09,F,michael.hernandez369@example.com,(791)-804-6897,3532 Main St,Chicago,FL,89530
+CUST1190,James,Martinez,1986-06-07,F,james.martinez383@example.com,(320)-306-7052,2834 Cedar Blvd,Chicago,CA,19847
+CUST1059,Linda,Garcia,1941-09-11,M,linda.garcia981@example.com,(533)-841-1968,9608 Maple Rd,Charlotte,CA,49030
+CUST1499,John,Garcia,1969-05-12,M,john.garcia158@example.com,(360)-890-2229,9327 Oak St,Miami,IL,45057
+CUST1199,Linda,Johnson,1974-03-27,F,linda.johnson896@example.com,(384)-238-6342,7451 Pine Ave,Austin,OH,89141
+CUST1463,Patricia,Miller,2002-09-23,F,patricia.miller912@example.com,(507)-535-2969,991 Oak St,Chicago,CA,33196
+CUST1336,Jennifer,Jones,1973-11-16,M,jennifer.jones901@example.com,(392)-510-6238,6189 Oak St,Austin,CA,34089
+CUST1128,Linda,Davis,1973-04-01,F,linda.davis939@example.com,(544)-200-4124,9619 Cedar Blvd,Atlanta,NC,18125
+CUST1161,Mary,Johnson,1986-10-13,F,mary.johnson674@example.com,(784)-360-8848,5308 Cedar Blvd,Atlanta,IL,95150
+CUST1154,William,Brown,1983-02-04,F,william.brown593@example.com,(843)-813-5114,3653 Oak St,Atlanta,OH,35426
+CUST1452,James,Davis,1962-06-03,F,james.davis554@example.com,(800)-924-4726,7332 Maple Rd,Charlotte,OH,19108
+CUST1216,John,Martinez,1988-10-19,M,john.martinez835@example.com,(696)-490-7059,7110 Oak St,Austin,GA,32612
+CUST1457,Elizabeth,Davis,1947-11-03,F,elizabeth.davis553@example.com,(828)-420-2177,4860 Maple Rd,Chicago,TX,63551
+CUST1422,Robert,Brown,1970-03-06,M,robert.brown442@example.com,(525)-697-7570,9296 Cedar Blvd,Columbus,OH,79967
+CUST1317,Robert,Martinez,1964-05-20,M,robert.martinez882@example.com,(523)-988-1140,4982 Oak St,Miami,IL,46378
+CUST1413,John,Davis,1985-02-22,F,john.davis769@example.com,(857)-201-7787,2237 Main St,Columbus,NC,39734
+CUST1480,Michael,Davis,1982-09-17,F,michael.davis544@example.com,(497)-235-6203,9767 Main St,Detroit,NC,86666
+CUST1429,Michael,Garcia,1943-07-24,F,michael.garcia319@example.com,(225)-720-1009,5852 Cedar Blvd,Charlotte,MI,81831
+CUST1393,James,Hernandez,1943-08-09,F,james.hernandez149@example.com,(863)-730-4683,7327 Oak St,Atlanta,TX,91571
+CUST1232,Elizabeth,Smith,1966-06-07,F,elizabeth.smith680@example.com,(886)-760-1482,3279 Oak St,Sacramento,OH,90532
+CUST1080,James,Garcia,1972-01-08,M,james.garcia754@example.com,(618)-654-8327,9838 Oak St,Atlanta,GA,17421
+CUST1117,William,Johnson,1988-07-14,M,william.johnson362@example.com,(796)-857-7780,6702 Maple Rd,New York,FL,27625
+CUST1376,Jennifer,Hernandez,1958-07-09,F,jennifer.hernandez135@example.com,(943)-940-8843,172 Main St,Philadelphia,GA,82240
+CUST1162,Mary,Jones,1946-10-11,M,mary.jones259@example.com,(348)-975-8397,1835 Oak St,New York,PA,55113
+CUST1361,John,Garcia,1954-05-16,M,john.garcia271@example.com,(969)-813-4874,9786 Maple Rd,Detroit,PA,54843
+CUST1358,Elizabeth,Brown,1980-06-27,M,elizabeth.brown576@example.com,(486)-502-1207,2765 Main St,Columbus,CA,56479
+CUST1453,Linda,Brown,1969-06-11,F,linda.brown641@example.com,(436)-478-5443,6870 Cedar Blvd,Miami,MI,72711
+CUST1114,James,Martinez,1985-08-21,M,james.martinez183@example.com,(605)-655-5895,5380 Cedar Blvd,Philadelphia,FL,29169
+CUST1182,Patricia,Smith,1955-10-31,F,patricia.smith848@example.com,(777)-560-1340,2917 Pine Ave,Atlanta,GA,94416
+CUST1356,John,Brown,1967-02-25,M,john.brown765@example.com,(395)-665-5406,8553 Pine Ave,Philadelphia,PA,80971
+CUST1093,Robert,Brown,1951-03-31,M,robert.brown660@example.com,(241)-877-9785,5648 Pine Ave,Detroit,NC,73133
+CUST1186,Jennifer,Williams,1961-01-23,M,jennifer.williams498@example.com,(604)-874-7721,7102 Oak St,New York,TX,82909
+CUST1427,Patricia,Johnson,1984-02-26,F,patricia.johnson636@example.com,(992)-452-5259,8386 Main St,Philadelphia,FL,21138
+CUST1121,John,Martinez,1987-09-23,M,john.martinez216@example.com,(681)-591-3964,7237 Maple Rd,Atlanta,FL,50108
+CUST1344,Patricia,Johnson,1993-03-03,F,patricia.johnson546@example.com,(589)-871-2884,4449 Oak St,Columbus,NY,81966
+CUST1262,John,Jones,1967-10-11,F,john.jones444@example.com,(841)-581-4850,789 Cedar Blvd,Detroit,GA,47846
+CUST1500,John,Martinez,1954-12-01,F,john.martinez289@example.com,(693)-462-9591,7007 Main St,Miami,FL,64823
+CUST1464,James,Jones,1943-10-14,F,james.jones919@example.com,(420)-619-5517,3402 Oak St,Chicago,FL,67022
+CUST1342,John,Miller,1944-03-29,M,john.miller840@example.com,(797)-844-5481,7998 Cedar Blvd,Philadelphia,PA,83294
+CUST1229,Robert,Hernandez,1961-11-19,F,robert.hernandez522@example.com,(264)-212-7356,8533 Cedar Blvd,Chicago,IL,57076
+CUST1372,Patricia,Smith,1970-10-04,M,patricia.smith799@example.com,(594)-902-7036,2455 Cedar Blvd,Charlotte,FL,35121
+CUST1460,Patricia,Johnson,1998-02-08,M,patricia.johnson844@example.com,(932)-635-4493,6264 Oak St,Sacramento,GA,40911
+CUST1132,James,Davis,1941-01-27,M,james.davis228@example.com,(329)-771-4631,6272 Main St,Charlotte,TX,30281
+CUST1177,Linda,Jones,1964-05-20,M,linda.jones901@example.com,(975)-925-3247,7188 Main St,Columbus,MI,66492
+CUST1280,John,Jones,1959-05-24,M,john.jones186@example.com,(300)-207-5940,3371 Main St,Columbus,CA,17788
+CUST1400,John,Davis,1947-06-04,M,john.davis744@example.com,(347)-476-1365,9966 Maple Rd,New York,OH,74027
+CUST1484,John,Hernandez,1964-07-17,F,john.hernandez451@example.com,(719)-519-7511,7604 Main St,Atlanta,TX,87360
+CUST1260,Patricia,Brown,1966-12-02,M,patricia.brown316@example.com,(577)-318-5285,7010 Oak St,Charlotte,IL,95667
+CUST1475,Linda,Johnson,1942-02-19,M,linda.johnson259@example.com,(550)-487-9714,621 Main St,Detroit,TX,36806
+CUST1240,William,Martinez,1952-07-19,M,william.martinez945@example.com,(323)-825-3461,785 Main St,Detroit,IL,87794
+CUST1047,Elizabeth,Miller,1984-12-17,M,elizabeth.miller879@example.com,(432)-729-3196,7265 Cedar Blvd,Detroit,MI,65533
+CUST1371,Michael,Miller,1979-11-23,F,michael.miller302@example.com,(455)-797-9853,4430 Main St,Philadelphia,TX,23057
+CUST1214,Robert,Brown,1983-08-04,M,robert.brown562@example.com,(606)-287-9652,3854 Cedar Blvd,Sacramento,MI,18706
+CUST1203,Jennifer,Williams,1984-12-01,M,jennifer.williams129@example.com,(307)-566-8295,3400 Oak St,Charlotte,MI,32656
+CUST1368,Robert,Williams,1986-01-31,F,robert.williams203@example.com,(682)-423-9033,2620 Oak St,Chicago,OH,89578
+CUST1346,Mary,Martinez,1945-11-29,M,mary.martinez492@example.com,(699)-797-3649,8605 Maple Rd,Sacramento,GA,29873
+CUST1266,Robert,Martinez,1982-02-08,M,robert.martinez854@example.com,(934)-269-8378,1224 Oak St,Miami,FL,28313
