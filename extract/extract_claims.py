@@ -1,4 +1,4 @@
-from extract_utils import extract_from_csv
+from .extract_utils import extract_from_csv
 
 def extract_claims(path: str):
     required_cols = [
