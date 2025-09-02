@@ -1,4 +1,4 @@
-from extract.extract import extract_claims_from_csv
+from extract.extract_claims import extract_claims
 from transform.transform import transform_claims
 from load.load import load_to_snowflake
 from utils.logger import logger
@@ -18,7 +18,7 @@ def main():
         #generate_synthetic_claims("data/claims.csv", num_new_claims=200, duplicate_rate=0.05)
 
         # Extract data from CSV
-        df_raw = extract_claims_from_csv("data/claims.csv")
+        df_raw = extract_claims("data/claims.csv")
         logger.info(f"Extracted {len(df_raw)} records.")
 
         # Transform data
