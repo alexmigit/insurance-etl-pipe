@@ -4,19 +4,9 @@ import pandas as pd
 import snowflake.connector
 from config.config import config
 from datetime import datetime
+from load.load_utils import get_connection
 
-def get_connection():
-    return snowflake.connector.connect(
-        user=config["snowflake"]["user"],
-        password=config["snowflake"]["password"],
-        account=config["snowflake"]["account"],
-        warehouse=config["snowflake"]["warehouse"],
-        database=config["snowflake"]["database"],
-        schema=config["snowflake"]["schema"],
-        role=config["snowflake"]["role"]
-    )
-
-def load_to_snowflake(df: pd.DataFrame, target_table: str):
+def load_claims(df: pd.DataFrame, target_table: str):
     conn = get_connection()
     cursor = conn.cursor()
 
