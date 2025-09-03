@@ -1,4 +1,5 @@
 from extract.extract_claims import extract_claims
+from extract.extract_policy import extract_policy
 from transform.transform import transform_claims
 from load.load import load_to_snowflake
 from utils.logger import logger
@@ -11,23 +12,32 @@ def main():
     It extracts data from a CSV file, transforms it, and loads it into Snowflake.
     """
     try:
-        logger.info("Starting ETL pipeline...")
+        logger.info("Starting insurance ETL pipeline...")
         send_slack_notification(":repeat: Insurance ETL pipeline started.")
 
         # Generate synthetic claims data (if needed)
         #generate_synthetic_claims("data/claims.csv", num_new_claims=200, duplicate_rate=0.05)
 
-        # Extract data from CSV
-        df_raw = extract_claims("data/claims.csv")
-        logger.info(f"Extracted {len(df_raw)} records.")
+        # Extract data from CSV files
+        df_raw_claims = extract_claims("data/claims.csv")
+        logger.info(f"Extracted {len(df_raw_claims)} claim records.")
+
+        df_raw_policies = extract_policy("data/policies.csv")
+        logger.info(f"Extracted {len(df_raw_policies)} policy records.")
 
         # Transform data
-        transformed_df = transform_claims(df_raw)
-        logger.info("Data transformation completed successfully.")
+        transformed_df = transform_claims(df_raw_claims)
+        logger.info("Claims data transformation completed successfully.")
+
+        transformed_df_policies = transform_claims(df_raw_policies)
+        logger.info("Policy data transformation completed successfully.")
 
         # Load data to Snowflake        
         load_to_snowflake(transformed_df, "raw_claims")
-        logger.info("Data loaded to Snowflake successfully.")
+        logger.info("Claims data loaded to Snowflake successfully.")
+
+        load_to_snowflake(transformed_df_policies, "raw_policies")
+        logger.info("Policy data loaded to Snowflake successfully.")
 
         # Send notification to Slack
         send_slack_notification("✅ Insurance ETL pipeline executed successfully.")
