@@ -1,14 +1,14 @@
 import pandas as pd
 
-def transform_policy(df):
+def transform_customer(df):
     """
-    Transforms the policy DataFrame by performing necessary data cleaning and processing.
+    Transforms the customer DataFrame by performing necessary data cleaning and processing.
     
     Args:
-        df (pd.DataFrame): The DataFrame containing policy data.
+        df (pd.DataFrame): The DataFrame containing customer data.
         
     Returns:
-        pd.DataFrame: A transformed DataFrame with cleaned and processed policy data.
+        pd.DataFrame: A transformed DataFrame with cleaned and processed customer data.
     """
     try:
         # Optional: normalize columns first
@@ -18,14 +18,11 @@ def transform_policy(df):
         numeric_cols = df.select_dtypes(include=['int64', 'float64']).columns
         df[numeric_cols] = df[numeric_cols].astype(float)
 
-        # Fill NaN claim_amount
-        df['premium_amount'] = df['premium_amount'].fillna(0)
-
-        # Deduplicate by POLICY_ID only
-        df = df.drop_duplicates(subset='policy_id')
+        # Deduplicate by CUSTOMER_ID only
+        df = df.drop_duplicates(subset='customer_id')
 
         # Convert date columns
-        date_cols = ['effective_date', 'expiration_date']
+        date_cols = ['date_of_birth']
         for col in date_cols:
             df[col] = pd.to_datetime(df[col], errors='coerce')
 
@@ -35,5 +32,5 @@ def transform_policy(df):
         return df
 
     except Exception as e:
-        print(f"Error transforming policy DataFrame: {e}")
+        print(f"Error transforming customer DataFrame: {e}")
         return pd.DataFrame()

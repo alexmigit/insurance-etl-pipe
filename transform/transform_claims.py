@@ -38,5 +38,5 @@ def transform_claims(df):
         return df
 
     except Exception as e:
-        print(f"Error transforming DataFrame: {e}")
+        print(f"Error transforming claims DataFrame: {e}")
         return pd.DataFrame()

@@ -1,7 +1,9 @@
 from extract.extract_claims import extract_claims
 from extract.extract_policy import extract_policy
+from extract.extract_customer import extract_customer
 from transform.transform_claims import transform_claims
 from transform.transform_policy import transform_policy
+from transform.transform_customer import transform_customer
 from load.load_claims import load_claims
 from load.load_policy import load_policy
 from utils.logger import logger
@@ -27,12 +29,18 @@ def main():
         df_raw_policies = extract_policy("data/policies.csv")
         logger.info(f"Extracted {len(df_raw_policies)} policy records.")
 
+        df_raw_customers = extract_customer("data/customers.csv")
+        logger.info(f"Extracted {len(df_raw_customers)} customer records.")
+
         # Transform data
         transformed_df_claims = transform_claims(df_raw_claims)
         logger.info("Claims data transformation completed successfully.")
 
         transformed_df_policies = transform_policy(df_raw_policies)
         logger.info("Policy data transformation completed successfully.")
+
+        transformed_df_customers = transform_customer(df_raw_customers)
+        logger.info("Customer data transformation completed successfully.")
 
         # Load data to Snowflake        
         load_claims(transformed_df_claims, "RAW_CLAIM")
