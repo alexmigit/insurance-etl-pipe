@@ -5,7 +5,7 @@ from config.config import config
 from datetime import datetime
 from load.load_utils import get_connection
 
-def load_customer(df: pd.DataFrame, target_table: str):
+def load_agent(df: pd.DataFrame, target_table: str):
     conn = get_connection()
     cursor = conn.cursor()
 
