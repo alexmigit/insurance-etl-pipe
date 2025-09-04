@@ -1,6 +1,7 @@
 from extract.extract_claims import extract_claims
 from extract.extract_policy import extract_policy
 from extract.extract_customer import extract_customer
+from extract.extract_agent import extract_agent
 from transform.transform_claims import transform_claims
 from transform.transform_policy import transform_policy
 from transform.transform_customer import transform_customer
@@ -28,6 +29,9 @@ def main():
 
         df_raw_customers = extract_customer("data/customers.csv")
         logger.info(f"Extracted {len(df_raw_customers)} customer records.")
+
+        df_raw_agents = extract_agent("data/agents.csv")
+        logger.info(f"Extracted {len(df_raw_agents)} agent records.")
 
         # Transform data
         transformed_df_claims = transform_claims(df_raw_claims)

@@ -52,7 +52,7 @@ def generate_agents(policies_csv, output_csv="agents.csv"):
 
     # Save
     df_agents.to_csv(output_csv, index=False)
-    print(f"✅ Agents table saved to {output_csv}")
+    print(f"✅ Agent synthetic data saved to {output_csv}")
     return df_agents
 
 # Example usage:
