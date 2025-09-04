@@ -1,7 +1,6 @@
 import os
 import tempfile
 import pandas as pd
-import snowflake.connector
 from config.config import config
 from datetime import datetime
 from load.load_utils import get_connection

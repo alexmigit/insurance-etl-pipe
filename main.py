@@ -6,6 +6,7 @@ from transform.transform_policy import transform_policy
 from transform.transform_customer import transform_customer
 from load.load_claims import load_claims
 from load.load_policy import load_policy
+from load.load_customer import load_customer
 from utils.logger import logger
 from utils.notify import send_slack_notification
 #from data.gen_claims import generate_synthetic_claims
@@ -48,6 +49,9 @@ def main():
 
         load_policy(transformed_df_policies, "RAW_POLICY")
         logger.info("Policy data loaded to Snowflake successfully.")
+
+        load_customer(transformed_df_customers, "RAW_CUSTOMER")
+        logger.info("Customer data loaded to Snowflake successfully.")
 
         # Log pipeline completion
         logger.info("Insurance ETL pipeline completed successfully.")
