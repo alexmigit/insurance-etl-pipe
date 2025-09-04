@@ -9,6 +9,7 @@ from transform.transform_agent import transform_agent
 from load.load_claims import load_claims
 from load.load_policy import load_policy
 from load.load_customer import load_customer
+from load.load_agent import load_agent
 from utils.logger import logger
 from utils.notify import send_slack_notification
 
@@ -56,6 +57,9 @@ def main():
 
         load_customer(transformed_df_customers, "RAW_CUSTOMER")
         logger.info("Customer data loaded to Snowflake successfully.")
+
+        load_agent(transformed_df_agents, "RAW_AGENT")
+        logger.info("Agent data loaded to Snowflake successfully.")
 
         # Log pipeline completion
         logger.info("Insurance ETL pipeline completed successfully.")
