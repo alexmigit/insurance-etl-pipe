@@ -55,5 +55,6 @@ def generate_agents(policies_csv, output_csv="agents.csv"):
     print(f"✅ Agent synthetic data saved to {output_csv}")
     return df_agents
 
-# Example usage:
-df_agents = generate_agents("policies.csv")
+if __name__ == "__main__":
+    df_agents = generate_agents("policies.csv")
+    print(df_agents.head(10))
