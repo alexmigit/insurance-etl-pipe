@@ -67,9 +67,9 @@ def load_agent(df: pd.DataFrame, target_table: str):
                 $2::VARCHAR AS FIRST_NAME,
                 $3::VARCHAR AS LAST_NAME,
                 $4::VARCHAR AS EMAIL,
-                $7::VARCHAR AS PHONE,
-                $8::VARCHAR AS AGENCY_NAME,
-                $12::TIMESTAMP_NTZ AS LOAD_TS
+                $5::VARCHAR AS PHONE,
+                $6::VARCHAR AS AGENCY_NAME,
+                $7::TIMESTAMP_NTZ AS LOAD_TS
             FROM @{stage_name}/{os.path.basename(tmp_file.name)}
         )
         FILE_FORMAT = (TYPE=CSV FIELD_OPTIONALLY_ENCLOSED_BY='"' SKIP_HEADER=1)
@@ -110,4 +110,3 @@ def load_agent(df: pd.DataFrame, target_table: str):
 
     cursor.close()
     print(f"🎉 Finished upsert into {target_table}")
-
