@@ -5,6 +5,7 @@ from extract.extract_agent import extract_agent
 from transform.transform_claims import transform_claims
 from transform.transform_policy import transform_policy
 from transform.transform_customer import transform_customer
+from transform.transform_agent import transform_agent
 from load.load_claims import load_claims
 from load.load_policy import load_policy
 from load.load_customer import load_customer
@@ -42,6 +43,9 @@ def main():
 
         transformed_df_customers = transform_customer(df_raw_customers)
         logger.info("Customer data transformation completed successfully.")
+
+        transformed_df_agents = transform_agent(df_raw_agents)
+        logger.info("Agent data transformation completed successfully.")
 
         # Load data to Snowflake        
         load_claims(transformed_df_claims, "RAW_CLAIM")
