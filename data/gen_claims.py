@@ -85,3 +85,6 @@ def generate_synthetic_claims(csv_path: str, num_new_claims: int = 220, duplicat
             for i, line in enumerate(f, 1):
                 if len(line.strip().split(',')) != len(df_existing.columns):
                     print(f"⚠️ Row {i} has wrong number of columns: {line.strip()}")
+
+# Generate synthetic claims data (if needed)
+generate_synthetic_claims("data/claims.csv", num_new_claims=200, duplicate_rate=0.05)

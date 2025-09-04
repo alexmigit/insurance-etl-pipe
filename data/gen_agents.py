@@ -1,46 +1,59 @@
 import pandas as pd
-import numpy as np
 import random
+import hashlib
 
-def generate_agent_data(num_agents: int = 20, output_csv: str = "agents.csv", seed: int = 42):
+def generate_agents(policies_csv, output_csv="agents.csv"):
     """
-    Generate synthetic insurance agent data without faker.
+    Generate deterministic synthetic agent data from policy file.
+    Each AGENT_ID will always map to the same agent attributes.
+    
+    Args:
+        policies_csv (str): Path to the policies.csv file containing AGENT_ID.
+        output_csv (str): Path where agents.csv will be written.
     """
-    np.random.seed(seed)
-    random.seed(seed)
+    # Load policies
+    df_policies = pd.read_csv(policies_csv)
 
-    first_names = ["David", "Sarah", "Chris", "Ashley", "Daniel", "Emily", "Matthew", "Hannah", "Joshua", "Megan"]
-    last_names = ["Anderson", "Clark", "Rodriguez", "Lewis", "Walker", "Hall", "Allen", "Young", "King", "Wright"]
+    # Ensure AGENT_ID exists
+    if "AGENT_ID" not in df_policies.columns:
+        raise ValueError("AGENT_ID column not found in policies file.")
 
-    regions = ["West", "Midwest", "South", "Northeast"]
+    # Unique agent IDs
+    agent_ids = df_policies["AGENT_ID"].dropna().unique()
 
+    # Pools for synthetic data
+    first_names = ["John", "Jane", "Michael", "Sarah", "David", "Emily", "Robert", "Laura"]
+    last_names = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis", "Garcia"]
+    agency_names = ["Prime Insurance", "SecureLife", "TrustGuard", "Shield Insurance", "SafeFuture"]
+
+    # Build agent table
     agents = []
-    for i in range(1, num_agents + 1):
-        first = np.random.choice(first_names)
-        last = np.random.choice(last_names)
+    for agent_id in agent_ids:
+        # Deterministic seed based on agent_id
+        seed = int(hashlib.sha256(str(agent_id).encode()).hexdigest(), 16) % (10**8)
+        random.seed(seed)
 
-        email = f"{first.lower()}.{last.lower()}{np.random.randint(10,99)}@insuranceco.com"
-        phone = f"({np.random.randint(200,999)})-{np.random.randint(200,999)}-{np.random.randint(1000,9999)}"
-        region = np.random.choice(regions)
+        fn = random.choice(first_names)
+        ln = random.choice(last_names)
+        email = f"{fn.lower()}.{ln.lower()}@agency.com"
+        phone = f"{random.randint(200,999)}-{random.randint(200,999)}-{random.randint(1000,9999)}"
+        agency = random.choice(agency_names)
 
         agents.append({
-            "AGENT_ID": i,
-            "FIRST_NAME": first,
-            "LAST_NAME": last,
+            "AGENT_ID": agent_id,
+            "FIRST_NAME": fn,
+            "LAST_NAME": ln,
             "EMAIL": email,
             "PHONE": phone,
-            "REGION": region
+            "AGENCY_NAME": agency
         })
 
-    agents_df = pd.DataFrame(agents)
+    df_agents = pd.DataFrame(agents)
 
-    # Save to CSV
-    agents_df.to_csv(output_csv, index=False)
-    print(f"✅ Generated {len(agents_df)} agents -> {output_csv}")
+    # Save
+    df_agents.to_csv(output_csv, index=False)
+    print(f"✅ Agents table saved to {output_csv}")
+    return df_agents
 
-    return agents_df
-
-
-if __name__ == "__main__":
-    df = generate_agent_data()
-    print(df.head(10))
+# Example usage:
+df_agents = generate_agents("policies.csv")

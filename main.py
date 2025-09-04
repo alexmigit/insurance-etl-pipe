@@ -9,7 +9,6 @@ from load.load_policy import load_policy
 from load.load_customer import load_customer
 from utils.logger import logger
 from utils.notify import send_slack_notification
-#from data.gen_claims import generate_synthetic_claims
 
 def main():
     """
@@ -19,9 +18,6 @@ def main():
     try:
         logger.info("Starting insurance ETL pipeline...")
         send_slack_notification(":repeat: Insurance ETL pipeline started.")
-
-        # Generate synthetic claims data (if needed)
-        #generate_synthetic_claims("data/claims.csv", num_new_claims=200, duplicate_rate=0.05)
 
         # Extract data from CSV files
         df_raw_claims = extract_claims("data/claims.csv")
