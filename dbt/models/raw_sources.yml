@@ -6,7 +6,7 @@ sources:
     database: insure_db
     schema: raw
     tables:
-      - name: raw_claims
+      - name: raw_claim
         description: "Raw claims data from source system"
         columns:
           - name: claim_id

@@ -17,7 +17,7 @@ claims as (
         coalesce(claim_amount, 0) as claim_amount,
         claim_date
 
-    from {{ ref('stg_claims') }}
+    from {{ ref('stg_claim') }}
 
     {% if is_incremental() %}
         -- Only new claims since last refresh

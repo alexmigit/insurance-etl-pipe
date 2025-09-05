@@ -19,20 +19,22 @@ raw as (
         status,
         adjuster_notes
     
-    from {{ source('raw', 'raw_claims') }}
+    from {{ source('raw', 'raw_claim') }}
 
 ),
 
-seeded as (
+customer as (
 
     select
         customer_id,
-        customer_name,
-        customer_address,
-        customer_dob,
-        customer_segment
+        first_name || ' ' || last_name as customer_name,
+        date_of_birth as customer_dob,
+        address as customer_address,
+        --city as customer_city,
+        --state as customer_state
+        --zip as customer_zip
 
-    from {{ ref('sample_customers') }}
+    from {{ source('raw', 'raw_customer') }}
 
 )
 
@@ -40,10 +42,12 @@ select
     r.claim_id,
     r.policy_id,
     r.customer_id,
-    s.customer_name,
-    s.customer_address,
-    s.customer_dob,
-    s.customer_segment,
+    c.customer_name,
+    c.customer_address,
+    --c.customer_city,
+    --c.customer_state,
+    --c.customer_zip,
+    c.customer_dob,
     cast(r.claim_amount as number(18,2)) as claim_amount,
     to_date(r.claim_date) as claim_date,
     to_date(r.incident_date) as incident_date,
@@ -53,6 +57,6 @@ select
 
 from raw r
 
-join seeded s
+join customer c
 
-on r.customer_id = s.customer_id
+on r.customer_id = c.customer_id

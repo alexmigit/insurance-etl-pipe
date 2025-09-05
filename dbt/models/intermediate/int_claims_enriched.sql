@@ -8,7 +8,7 @@ with
 
 claims as (
 
-  select * from {{ ref('stg_claims') }}
+  select * from {{ ref('stg_claim') }}
 
 ),
 
