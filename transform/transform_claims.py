@@ -11,26 +11,31 @@ def transform_claims(df):
         pd.DataFrame: A transformed DataFrame with cleaned and processed claims data.
     """
     try:
-        # Optional: normalize columns first
+        # Normalize column names
+        df = df.copy()
         df.columns = df.columns.str.strip().str.lower()
 
         # Numeric columns
         numeric_cols = df.select_dtypes(include=['int64', 'float64']).columns
-        df[numeric_cols] = df[numeric_cols].astype(float)
+        if not numeric_cols.empty:
+            df.loc[:, numeric_cols] = df[numeric_cols].astype(float)
 
         # Fill NaN claim_amount
-        df['claim_amount'] = df['claim_amount'].fillna(0)
+        if "claim_amount" in df.columns:
+            df.loc[:, "claim_amount"] = df["claim_amount"].fillna(0)
 
         # Deduplicate by CLAIM_ID only
-        df = df.drop_duplicates(subset='claim_id')
+        if "claim_id" in df.columns:
+            df = df.drop_duplicates(subset="claim_id")
 
         # Fill missing adjuster_notes
-        df['adjuster_notes'] = df['adjuster_notes'].fillna("No notes provided")
+        if "adjuster_notes" in df.columns:
+            df.loc[:, "adjuster_notes"] = df["adjuster_notes"].fillna("No notes provided")
 
         # Convert date columns
-        date_cols = ['claim_date', 'incident_date']
-        for col in date_cols:
-            df[col] = pd.to_datetime(df[col], errors='coerce')
+        for col in ["claim_date", "incident_date"]:
+            if col in df.columns:
+                df.loc[:, col] = pd.to_datetime(df[col], errors="coerce")
 
         # Rename columns to match loader expectations (all caps)
         df.columns = [col.upper() for col in df.columns]
