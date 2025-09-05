@@ -76,7 +76,7 @@ sources:
           - name: agency_name
             description: "Name of the agency"
 
-      - name: raw_payments
+      - name: raw_payment
         description: "Raw payments data"
         columns:
           - name: payment_id
