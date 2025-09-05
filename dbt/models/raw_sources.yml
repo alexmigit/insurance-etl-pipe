@@ -65,14 +65,16 @@ sources:
         columns:
           - name: agent_id
             description: "Unique agent identifier"
-          - name: agent_name
-            description: "Name of agent"
+          - name: first_name
+            description: "Agent first name"
+          - name: last_name
+            description: "Agent last name"
           - name: email
             description: "Agent email"
           - name: phone
             description: "Agent phone number"
-          - name: office_location
-            description: "Office location"
+          - name: agency_name
+            description: "Name of the agency"
 
       - name: raw_payments
         description: "Raw payments data"
