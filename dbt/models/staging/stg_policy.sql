@@ -11,8 +11,8 @@ policy as (
     select
         cast(policy_id as varchar) as policy_id,
         cast(customer_id as varchar) as customer_id,
-        cast(agent_id as varchar) as agent_id,
         policy_type,
+        cast(agent_id as varchar) as agent_id,
         cast(effective_date as date) as effective_date,
         cast(expiration_date as date) as expiration_date,
         cast(premium_amount as number(12,2)) as premium_amount,
