@@ -12,6 +12,7 @@ from load.load_claims import load_claims
 from load.load_policy import load_policy
 from load.load_customer import load_customer
 from load.load_agent import load_agent
+from load.load_payment import load_payment
 from utils.logger import logger
 from utils.notify import send_slack_notification
 
@@ -68,6 +69,9 @@ def main():
 
         load_agent(transformed_df_agents, "RAW_AGENT")
         logger.info("Agent data loaded to Snowflake successfully.")
+
+        load_payment(transformed_df_payments, "RAW_PAYMENT")
+        logger.info("Payment data loaded to Snowflake successfully.")
 
         # Log pipeline completion
         logger.info("Insurance ETL pipeline completed successfully.")
