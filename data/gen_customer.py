@@ -65,11 +65,10 @@ def generate_customer_data(claims_csv: str, output_csv: str = "customers.csv", s
 
     # Save to CSV
     customers_df.to_csv(output_csv, index=False)
+    print(customers_df.head(10))
     print(f"✅ Generated {len(customers_df)} customers -> {output_csv}")
 
     return customers_df
 
-
 if __name__ == "__main__":
     df = generate_customer_data("claims.csv")
-    print(df.head(10))

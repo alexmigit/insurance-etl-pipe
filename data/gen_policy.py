@@ -55,11 +55,10 @@ def generate_policy_data(claims_csv: str, output_csv: str = "policies.csv", seed
 
     # Save to CSV
     policies_df.to_csv(output_csv, index=False)
+    print(policies_df.head(10))
     print(f"✅ Generated {len(policies_df)} policies -> {output_csv}")
 
     return policies_df
 
-
 if __name__ == "__main__":
     df = generate_policy_data("claims.csv")
-    print(df.head(10))

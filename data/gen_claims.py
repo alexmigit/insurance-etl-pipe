@@ -77,6 +77,7 @@ def generate_synthetic_claims(csv_path: str, num_new_claims: int = 220, duplicat
         quoting=csv.QUOTE_ALL
     )
 
+    print(df_new.head(10))
     print(f"✅ Added {len(df_new)} synthetic claims to {csv_path}")
 
     # Optional validation
@@ -89,4 +90,3 @@ def generate_synthetic_claims(csv_path: str, num_new_claims: int = 220, duplicat
 # Generate synthetic claims data (if needed)
 if __name__ == "__main__":
     df = generate_synthetic_claims("data/claims.csv", num_new_claims=200, duplicate_rate=0.05)
-    print(df.head(10))

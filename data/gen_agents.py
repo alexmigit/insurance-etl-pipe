@@ -50,11 +50,12 @@ def generate_agents(policies_csv, output_csv="agents.csv"):
 
     df_agents = pd.DataFrame(agents)
 
-    # Save
+    # Save output to CSV
     df_agents.to_csv(output_csv, index=False)
+    print(df_agents.head(10))
     print(f"✅ Agent synthetic data saved to {output_csv}")
+
     return df_agents
 
 if __name__ == "__main__":
     df_agents = generate_agents("policies.csv")
-    print(df_agents.head(10))
