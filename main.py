@@ -7,6 +7,7 @@ from transform.transform_claims import transform_claims
 from transform.transform_policy import transform_policy
 from transform.transform_customer import transform_customer
 from transform.transform_agent import transform_agent
+from transform.transform_payment import transform_payment
 from load.load_claims import load_claims
 from load.load_policy import load_policy
 from load.load_customer import load_customer
@@ -36,7 +37,7 @@ def main():
         df_raw_agents = extract_agent("data/agents.csv")
         logger.info(f"Extracted {len(df_raw_agents)} agent records.")
 
-        df_raw_agents = extract_payment("data/payments.csv")
+        df_raw_payments = extract_payment("data/payments.csv")
         logger.info(f"Extracted {len(df_raw_agents)} payment records.")
 
         # Transform data
@@ -51,6 +52,9 @@ def main():
 
         transformed_df_agents = transform_agent(df_raw_agents)
         logger.info("Agent data transformation completed successfully.")
+
+        transformed_df_payments = transform_payment(df_raw_payments)
+        logger.info("Payment data transformation completed successfully.")
 
         # Load data to Snowflake        
         load_claims(transformed_df_claims, "RAW_CLAIM")
