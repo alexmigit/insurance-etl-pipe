@@ -13,13 +13,13 @@ policies as (
         policy_id,
         customer_id,
         policy_type,
-        effective_date,
-        expiration_date,
         premium_amount,
         status,
+        effective_date,
+        expiration_date,
         agent_id
 
-    from {{ ref('sample_policy') }}
+    from {{ ref('int_policy_enriched') }}
 
 )
 
@@ -28,10 +28,10 @@ select
     policy_id,
     customer_id,
     policy_type,
-    effective_date,
-    expiration_date,
     premium_amount,
     status,
+    effective_date,
+    expiration_date,
     agent_id
 
 from policies
