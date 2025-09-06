@@ -29,8 +29,8 @@ select
     p.customer_id,
     p.customer_name,
     p.customer_address,
-    --p.customer_city,
-    --p.customer_state,
+    p.customer_city,
+    p.customer_state,
     p.agent_id,
     p.agent_name
 

@@ -9,7 +9,10 @@ base as (
         customer_sex,
         customer_email,
         customer_phone,
-        customer_address
+        customer_address,
+        customer_city,
+        customer_state,
+        customer_zip
     
     from {{ ref('stg_customer') }}
 
@@ -25,6 +28,9 @@ with_policy as (
         c.customer_email,
         c.customer_phone,
         c.customer_address,
+        c.customer_city,
+        c.customer_state,
+        c.customer_zip,
         count(distinct p.policy_id) as total_policies,
         max(p.effective_date) as most_recent_policy_date
 
