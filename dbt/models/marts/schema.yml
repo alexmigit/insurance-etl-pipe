@@ -1,0 +1,96 @@
+version: 2
+
+models:
+  - name: fct_claim
+    description: "Fact table with one row per claim, enriched with policy and customer context."
+    columns:
+      - name: claim_id
+        description: "Unique identifier for the claim."
+        tests: 
+          - unique
+          - not_null
+      - name: policy_id
+        description: "FK to dim_policy."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_policy')
+              field: policy_id
+      - name: customer_id
+        description: "FK to dim_customer."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_id
+      - name: agent_id
+        description: "FK to dim_agent."
+        tests:
+          - relationships:
+              to: ref('dim_agent')
+              field: agent_id
+
+  - name: fct_payment
+    description: "Fact table with one row per payment tied to a policy and customer."
+    columns:
+      - name: payment_id
+        description: "Unique identifier for the payment."
+        tests:
+          - unique
+          - not_null
+      - name: policy_id
+        description: "FK to dim_policy."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_policy')
+              field: policy_id
+      - name: customer_id
+        description: "FK to dim_customer."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_id
+
+  - name: fct_policy
+    description: "Fact table with one row per policy storing financial exposure."
+    columns:
+      - name: policy_id
+        description: "Unique identifier for the policy."
+        tests:
+          - unique
+          - not_null
+      - name: agent_id
+        description: "FK to dim_agent."
+        tests:
+          - relationships:
+              to: ref('dim_agent')
+              field: agent_id
+
+  - name: dim_customer
+    description: "Dimension table for customer details."
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier."
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_agent
+    description: "Dimension table for insurance agents."
+    columns:
+      - name: agent_id
+        description: "Unique agent identifier."
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_policy
+    description: "Dimension table for policy attributes."
+    columns:
+      - name: policy_id
+        description: "Unique policy identifier."
+        tests:
+          - unique
+          - not_null
