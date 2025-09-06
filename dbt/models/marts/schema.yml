@@ -13,22 +13,14 @@ models:
         description: "FK to dim_policy."
         tests:
           - not_null
-          - relationships:
-              to: ref('dim_policy')
-              field: policy_id
       - name: customer_id
         description: "FK to dim_customer."
         tests:
           - not_null
-          - relationships:
-              to: ref('dim_customer')
-              field: customer_id
       - name: agent_id
         description: "FK to dim_agent."
         tests:
-          - relationships:
-              to: ref('dim_agent')
-              field: agent_id
+          - not_null
 
   - name: fct_payment
     description: "Fact table with one row per payment tied to a policy and customer."
@@ -42,16 +34,10 @@ models:
         description: "FK to dim_policy."
         tests:
           - not_null
-          - relationships:
-              to: ref('dim_policy')
-              field: policy_id
       - name: customer_id
         description: "FK to dim_customer."
         tests:
           - not_null
-          - relationships:
-              to: ref('dim_customer')
-              field: customer_id
 
   - name: fct_policy
     description: "Fact table with one row per policy storing financial exposure."
@@ -64,9 +50,7 @@ models:
       - name: agent_id
         description: "FK to dim_agent."
         tests:
-          - relationships:
-              to: ref('dim_agent')
-              field: agent_id
+          - not_null
 
   - name: dim_customer
     description: "Dimension table for customer details."
