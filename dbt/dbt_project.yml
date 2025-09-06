@@ -32,9 +32,23 @@ models:
   insurance_etl:
     staging:
       +materialized: view
+      +schema: analytics
+    intermediate:
+      +materialized: table
+      +schema: analytics
     marts:
       +materialized: table
+      +schema: analytics
 
 seeds:
   insurance_etl:
-    +schema: staging
+    +schema: seeds
+
+tests:
+  insurance_etl:
+    +store_failures: true
+    +schema: tests
+
+snapshots:
+  insurance_etl:
+    +schema: snapshots
