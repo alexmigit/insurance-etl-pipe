@@ -22,29 +22,25 @@ renamed as (
         --strings
         payment_method,
         case 
-            when payment_method in ('stripe', 'square', 'credit card') then 'Credit'
-            when payment_method in ('ach', 'bank transfer') then 'Bank'
-            when payment_method in ('cash', 'check', 'money order') then 'Cash'
-            when payment_method in ('paypal', 'venmo', 'zelle') then 'Digital Wallet'   
+            when payment_method in ('Stripe', 'Square', 'Credit Card') then 'Credit'
+            when payment_method in ('ACH', 'Bank Transfer') then 'Bank'
+            when payment_method in ('Cash', 'Check', 'Money Order') then 'Cash'
+            when payment_method in ('Paypal', 'Venmo', 'Zelle') then 'Digital Wallet'   
             else 'Other'
         end as payment_type,
         status,
 
         -- booleans
         case
-            when status = 'completed' then true
+            when status = 'Completed' then true
             else false
         end as is_completed,
 
+        -- numerics
         payment_amount as amount,
 
         -- dates
-        date_trunc('month', cast(payment_date as date)) as payment_month,
-        date_trunc('year', cast(payment_date as date)) as payment_year,
-        date_trunc('quarter', cast(payment_date as date)) as payment_quarter,
-        date_trunc('week', cast(payment_date as date)) as payment_week,
-        date_trunc('day', cast(payment_date as date)) as payment_day,
-        date_trunc('day', payment_date) as payment_day_full,
+        payment_date as date,
 
     from source
 
