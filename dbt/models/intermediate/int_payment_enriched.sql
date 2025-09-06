@@ -1,9 +1,3 @@
-{{ 
-    config(
-        materialized='view'
-    ) 
-}}
-
 with 
 
 payments as (
@@ -20,7 +14,6 @@ policies as (
 
 select
     pay.payment_id,
-    pay.payment_date,
     pay.amount,
     pay.payment_method,
     p.policy_id,
@@ -32,7 +25,8 @@ select
     p.customer_city,
     p.customer_state,
     p.agent_id,
-    p.agent_name
+    p.agent_name,
+    --pay.payment_date
 
 from payments pay
 

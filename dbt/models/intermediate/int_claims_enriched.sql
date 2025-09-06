@@ -1,9 +1,3 @@
-{{ 
-  config(
-    materialized='view'
-  ) 
-}}
-
 with 
 
 claims as (

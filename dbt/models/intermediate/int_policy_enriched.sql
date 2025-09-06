@@ -1,9 +1,3 @@
-{{ 
-    config(
-        materialized='view'
-    ) 
-}}
-
 with 
 
 policies as (

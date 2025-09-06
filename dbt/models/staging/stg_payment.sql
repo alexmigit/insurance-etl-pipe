@@ -40,7 +40,7 @@ renamed as (
         payment_amount as amount,
 
         -- dates
-        payment_date as date,
+        payment_date as date
 
     from source
 

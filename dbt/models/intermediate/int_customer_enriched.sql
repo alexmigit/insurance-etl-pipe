@@ -39,7 +39,7 @@ with_policy as (
     left join {{ ref('stg_policy') }} p
       on c.customer_id = p.customer_id
 
-    group by 1, 2, 3, 4, 5, 6, 7
+    group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 )
 
 select * from with_policy
