@@ -22,7 +22,7 @@ select
     pay.payment_id,
     pay.payment_date,
     pay.amount,
-    pay.payment_type,
+    pay.payment_method,
     p.policy_id,
     p.policy_type,
     p.premium_amount,
