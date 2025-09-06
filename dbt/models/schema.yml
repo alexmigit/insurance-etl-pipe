@@ -36,7 +36,7 @@ models:
               arguments:
                 expression: "premium_amount >= 0"
 
-  - name: fact_claim
+  - name: fct_claim
     description: "Claims fact table linking customers, policies, and dates"
     columns:
       - name: claim_fact_id
