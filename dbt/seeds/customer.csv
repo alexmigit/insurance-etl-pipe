@@ -1,6 +1,0 @@
-customer_id,first_name,last_name,date_of_birth,gender,email,phone,address
-CUST101,John,Doe,1985-04-12,M,john.doe@email.com,555-1234,123 Main St
-CUST102,Jane,Smith,1990-08-22,F,jane.smith@email.com,555-5678,456 Oak Ave
-CUST103,Michael,Johnson,1975-11-05,M,mike.j@email.com,555-8765,789 Pine Rd
-CUST104,Emily,Davis,1988-02-19,F,emily.d@email.com,555-3456,321 Cedar Blvd
-CUST105,David,Brown,1995-12-01,M,david.b@email.com,555-6543,654 Maple Ln

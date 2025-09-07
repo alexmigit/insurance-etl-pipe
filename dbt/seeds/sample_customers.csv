@@ -1,4 +1,0 @@
-customer_id,customer_name,customer_address,customer_dob,customer_segment
-CUST1001,John Doe,"123 Main St",1985-02-20,Gold
-CUST1002,Jane Smith,"45 Park Ave",1990-11-02,Silver
-CUST1003,Bob Johnson,"99 Elm St",1975-08-15,Platinum
