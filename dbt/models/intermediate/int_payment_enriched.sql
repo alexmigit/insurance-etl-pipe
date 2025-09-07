@@ -26,7 +26,7 @@ select
     p.customer_state,
     p.agent_id,
     p.agent_name,
-    --pay.payment_date
+    pay.date
 
 from payments pay
 

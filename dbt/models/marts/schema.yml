@@ -38,6 +38,10 @@ models:
         description: "FK to dim_customer."
         tests:
           - not_null
+      - name: date
+        description: "Date the payment was made."
+        tests:
+          - not_null
 
   - name: fct_policy
     description: "Fact table with one row per policy storing financial exposure."

@@ -9,5 +9,5 @@ select
     premium_amount,
     customer_id,
     agent_id,
-    --payment_date
+    date
 from {{ ref('int_payment_enriched') }}
