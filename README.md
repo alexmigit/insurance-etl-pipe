@@ -1,18 +1,18 @@
-# Insurance ETL Pipeline
+# Data Engineering | Insurance ETL Pipeline
 
 **`insurance-etl-pipe`**
-A pipeline for extracting, transforming, and loading insurance data.
+A Pipeline For Extracting, Transforming, and Loading Insurance Data.
 
 ---
 
-## 🛠 Setup
+## 🛠 Quick Setup
 
 ### 1. Snowflake Configuration
 Run the [`setup_snowflake.sql`](setup_snowflake.sql) script in a **Snowflake Worksheet** to configure your database and schemas.
 
 ---
 
-### 2. Virtual Environment
+### 2. Create Virtual Environment
 Create and activate a Python virtual environment:
 
 ```bash
@@ -28,7 +28,7 @@ Install the required Python packages:
 pip install -r requirements.txt
 ```
 
-### 4. Environment Variables
+### 4. Set Environment Variables
 Create a .env file in the project root and populate it with your credentials and configuration.
 
 ```bash
@@ -49,7 +49,7 @@ Execute the main script:
 python main.py
 ```
 
-### 6. dbt Integration
+### 6. dbt Core Integration
 Load environment variables for dbt:
 
 ```bash
