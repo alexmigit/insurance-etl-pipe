@@ -18,7 +18,7 @@ Create and activate a Python virtual environment:
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # Linux/Mac
-# .venv\Scripts\activate    # Windows
+# .venv\Scripts\activate   # Windows
 ```
 
 ### 3. Install Dependencies
@@ -31,7 +31,19 @@ pip install -r requirements.txt
 ### 4. Environment Variables
 Create a .env file in the project root and populate it with your credentials and configuration.
 
-### Run the Pipeline
+```bash
+SNOWFLAKE_USER=''
+SNOWFLAKE_PASSWORD=''
+SNOWFLAKE_ACCOUNT=''
+SNOWFLAKE_DATABASE=''
+SNOWFLAKE_SCHEMA=''
+SNOWFLAKE_WAREHOUSE=''
+SNOWFLAKE_ROLE=''
+SLACK_WEBHOOK_URL=''
+```
+
+### 5. Run the Pipeline
+Execute the main script:
 
 ```bash
 python main.py
@@ -41,7 +53,7 @@ python main.py
 Load environment variables for dbt:
 
 ```bash
-set -a; source .env; set +a; dbt run
+set -a; source .env; set +a;
 ```
 
 Then run your dbt commands (e.g., dbt run).
