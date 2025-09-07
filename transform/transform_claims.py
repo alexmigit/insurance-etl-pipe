@@ -11,9 +11,26 @@ def transform_claims(df):
         pd.DataFrame: A transformed DataFrame with cleaned and processed claims data.
     """
     try:
-        # Normalize column names
-        df = df.copy()
-        df.columns = df.columns.str.strip().str.lower()
+        print("🔍 Incoming DataFrame shape:", df.shape)
+
+        # Normalize column names to uppercase and strip whitespace
+        df.columns = df.columns.str.strip().str.upper()
+
+        # Column alias map (to guarantee CLAIM_ID is found)
+        column_aliases = {
+            "CLAIMID": "CLAIM_ID",
+            "ID": "CLAIM_ID",
+            "CLMID": "CLAIM_ID"
+        }
+        df = df.rename(columns={col: column_aliases[col] for col in df.columns if col in column_aliases})   
+
+        if "claim_id" not in df.columns:
+            raise ValueError("❌ CLAIM_ID column missing after normalization.")
+        
+        print("✅ Columns normalized:", df.columns.tolist())
+
+        # Track changes for "no transformation" message
+        original_df = df.copy() 
 
         # Numeric columns
         numeric_cols = df.select_dtypes(include=['int64', 'float64']).columns
@@ -27,6 +44,7 @@ def transform_claims(df):
         # Deduplicate by CLAIM_ID only
         if "claim_id" in df.columns:
             df = df.drop_duplicates(subset="claim_id")
+            print("After dedup:", df.shape)
 
         # Fill missing adjuster_notes
         if "adjuster_notes" in df.columns:
@@ -37,11 +55,12 @@ def transform_claims(df):
             if col in df.columns:
                 df.loc[:, col] = pd.to_datetime(df[col], errors="coerce")
 
-        # Rename columns to match loader expectations (all caps)
-        df.columns = [col.upper() for col in df.columns]
+        # Check if transformations changed the data
+        if df.equals(original_df):
+            print("ℹ️ No transformations were required.")
 
         return df
 
     except Exception as e:
-        print(f"Error transforming claims DataFrame: {e}")
+        print(f"❌ Error transforming claims DataFrame: {e}")
         return pd.DataFrame()
