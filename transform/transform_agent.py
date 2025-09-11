@@ -16,7 +16,7 @@ def transform_agent(df):
         # Normalize columns to uppercase and strip whitespace
         df.columns = df.columns.str.strip().str.upper()
 
-        # Column alias map (to guarantee CUSTOMER_ID is found)
+        # Column alias map (to guarantee AGENT_ID is found)
         column_aliases = {
             "AGENTID": "AGENT_ID",
             "ID": "AGENT_ID",
